@@ -1,0 +1,16 @@
+.root {
+	composes: container from global;
+	composes: mx-auto from global;
+	composes: relative from global;
+}
+
+.image {
+	composes: flex from global;
+}
+
+.text {
+	composes: absolute from global;
+	composes: h-full from global;
+	composes: inset-0 from global;
+	composes: w-full from global;
+}

@@ -2,18 +2,39 @@
   "name": "rsc",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev",
+    "format": "prettier --write '@(components|pages|styles|theme)/**/*.@(css|js|jsx)' '*.config.js'",
+    "lint": "next lint",
+    "start": "next start"
   },
   "dependencies": {
+    "@apollo/client": "^3.4.17",
+    "@tailwindcss/aspect-ratio": "^0.3.0",
+    "graphql": "^16.0.1",
     "next": "12.0.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react": "^18.0.0-alpha-a44a7a2a3-20211111",
+    "react-dom": "^18.0.0-alpha-a44a7a2a3-20211111"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.0",
     "eslint": "7",
-    "eslint-config-next": "12.0.3"
+    "eslint-config-next": "12.0.3",
+    "postcss": "^8.3.11",
+    "prettier": "^2.4.1",
+    "tailwindcss": "^2.2.19"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "quoteProps": "consistent",
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingComma": "none",
+    "useTabs": true
   }
 }
