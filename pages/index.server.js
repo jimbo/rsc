@@ -1,3 +1,3 @@
-import Home from "../components/server/Home/home.server"
+import Home from "../components/Home/home.server"
 
 export default Home

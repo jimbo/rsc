@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Suspense } from "react"
 import useData from "../../../hooks/useData"
-import Banner from "../../client/Banner/banner.client"
+import Banner from "../Banner/banner.client"
 
 export default function Home() {
 	return (
