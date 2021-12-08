@@ -1,4 +1,5 @@
 import { ApolloProvider } from "@apollo/client"
+import Layout from "../components/Layout/layout.server"
 import { useApolloClient } from "../hooks/useApolloClient"
 import "../styles/globals.css"
 
@@ -8,7 +9,9 @@ export default function App(props) {
 
 	return (
 		<ApolloProvider client={client}>
-			<Component {...pageProps} />
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
 		</ApolloProvider>
 	)
 }

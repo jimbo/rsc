@@ -14,6 +14,24 @@ const config = {
 	},
 	separator: "_",
 	theme: {
+		extend: {
+			gridTemplateRows: {
+				common: "auto 1fr"
+			}
+		},
+		fontSize: {
+			100: "0.625rem",
+			200: "0.75rem",
+			300: "0.875rem",
+			400: "1rem",
+			500: "1.25rem",
+			600: "1.5rem",
+			700: "2.125rem",
+			800: "3rem",
+			900: "3.75rem",
+			1000: "6rem",
+			DEFAULT: "0.875rem"
+		},
 		screens: {
 			"xs": "480px",
 			"sm": "640px",
@@ -21,7 +39,8 @@ const config = {
 			"lg": "960px",
 			"xl": "1120px",
 			"2xl": "1280px",
-			"3xl": "1440px"
+			"3xl": "1440px",
+			"4xl": "1600px"
 		}
 	}
 }

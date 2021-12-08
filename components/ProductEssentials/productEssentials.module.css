@@ -1,0 +1,11 @@
+.root {
+	composes: bg-green-100 col-span-5 col-start-7 content-start gap-4 grid h-40 row-span-1 row-start-1 from global;
+}
+
+.name {
+	composes: text-700 from global;
+}
+
+.price {
+	composes: font-light text-600 from global;
+}

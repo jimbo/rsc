@@ -2,7 +2,7 @@ import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client"
 import { useMemo } from "react"
 
 const DEFAULT_URI =
-	"https://commerce-int.adobe.io/api/runtime/graphql?api_key=adobeio_onboarding"
+	"https://commerce-beta.adobe.io/api/MicroconfTenant/graphql?api_key=commerce-graphql-onboarding"
 
 export const createClient = () =>
 	new ApolloClient({

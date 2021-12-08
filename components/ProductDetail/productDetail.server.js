@@ -1,13 +1,18 @@
 import { Fragment, Suspense } from "react"
 import { DEFAULT_CLIENT } from "../../hooks/useApolloClient"
 import { useData } from "../../hooks/useData"
+import Banner from "../Banner/banner.server"
+import ProductConfig from "../ProductConfig/productConfig.client"
+import ProductEssentials from "../ProductEssentials/productEssentials.server"
+import ProductImages from "../ProductImages/productImages.server"
 import { getProductDetail } from "./productDetail.gql"
+import classes from "./productDetail.module.css"
 
 const FALLBACK = <p>{"Loading..."}</p>
 
 export default function ProductDetail() {
 	return (
-		<div id="product-detail">
+		<div id="product-detail" className={classes.root}>
 			<Suspense fallback={FALLBACK}>
 				<ProductDetailData />
 			</Suspense>
@@ -17,20 +22,26 @@ export default function ProductDetail() {
 
 function ProductDetailData() {
 	const result = useData(FETCHERS.getProductDetail)
-	console.log(`Hook returned: ${result}`)
+	const [product] = result?.data?.products?.items || []
+	const { configurable_options, media_gallery, name, price_range } =
+		product || {}
 
-	return <Child bg={result ? "0 0 255" : "0 255 0"} />
-}
+	const price = price_range?.minimum_price?.regular_price
 
-function Child(props) {
-	const style = {
-		"--bg": props.bg || "255 0 0",
-		"backgroundColor": "rgb(var(--bg))",
-		"height": "80px",
-		"width": "80px"
-	}
-
-	return <div id="child" style={style} />
+	return (
+		<Fragment>
+			<section className={classes.aboveFold}>
+				<ProductEssentials name={name} price={price} />
+				<ProductImages images={media_gallery} />
+				<ProductConfig options={configurable_options} />
+			</section>
+			<section className={classes.belowFold}>
+				<Suspense fallback={null}>
+					<Banner />
+				</Suspense>
+			</section>
+		</Fragment>
+	)
 }
 
 const FETCHERS = {

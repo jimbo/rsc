@@ -1,0 +1,11 @@
+.root {
+	composes: col-span-12 gap-6 grid justify-items-stretch from global;
+}
+
+.aboveFold {
+	composes: bg-gray-800 col-span-12 col-start-1 gap-6 grid grid-cols-10 grid-rows-common from global;
+}
+
+.belowFold {
+	composes: col-span-12 col-start-1 from global;
+}

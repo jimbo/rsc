@@ -1,0 +1,15 @@
+.root {
+	composes: grid grid-rows-common min-h-screen from global;
+}
+
+.header {
+	composes: bg-gray-100 h-14 px-12 from global;
+}
+
+.body {
+	composes: gap-6 grid grid-cols-12 p-12 from global;
+}
+
+.footer {
+	composes: bg-gray-100 h-64 px-12 from global;
+}
