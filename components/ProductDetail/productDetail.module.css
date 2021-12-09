@@ -3,7 +3,7 @@
 }
 
 .aboveFold {
-	composes: bg-gray-800 col-span-12 col-start-1 gap-6 grid grid-cols-10 grid-rows-common from global;
+	composes: col-span-12 col-start-1 gap-6 grid grid-cols-10 grid-rows-common from global;
 }
 
 .belowFold {

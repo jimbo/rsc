@@ -1,3 +1,19 @@
 .root {
-	composes: bg-pink-100 container h-96 from global;
+	composes: bg-gray-100 container grid grid-cols-12 grid-flow-col from global;
+}
+
+.image {
+	composes: col-span-8 col-start-5 grid items-stretch justify-items-stretch ratio-8/3 from global;
+}
+
+.content {
+	composes: bg-gray-800 col-span-4 col-start-1 content-center font-light gap-4 grid items-center p-12 ratio-4/3 text-500 text-white from global;
+}
+
+.title {
+	composes: text-800 from global;
+}
+
+.action {
+	composes: font-normal from global;
 }

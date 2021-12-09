@@ -1,5 +1,5 @@
 .root {
-	composes: bg-yellow-100 col-span-5 col-start-7 content-start gap-12 grid row-span-1 row-start-2 from global;
+	composes: col-span-5 col-start-7 content-start gap-12 grid row-span-1 row-start-2 from global;
 }
 
 .legend {
