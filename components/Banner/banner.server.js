@@ -20,9 +20,13 @@ export default function Banner(props) {
 				<Placeholder />
 			</div>
 			<div className={classes.content}>
-				<div className={classes.title}>{DEFAULT_DATA.title}</div>
-				<div className={classes.subtitle}>{DEFAULT_DATA.subtitle}</div>
-				<div className={classes.actions}>{actionElements}</div>
+				<div className={classes.wrapper}>
+					<div className={classes.title}>{DEFAULT_DATA.title}</div>
+					<div className={classes.subtitle}>
+						{DEFAULT_DATA.subtitle}
+					</div>
+					<div className={classes.actions}>{actionElements}</div>
+				</div>
 			</div>
 		</div>
 	)

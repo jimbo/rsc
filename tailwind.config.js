@@ -1,5 +1,4 @@
-// const aspectRatioPlugin = require("@tailwindcss/aspect-ratio")
-const aspectRatioPlugin = require("./plugins/aspectRatio")
+const aspectRatioPlugin = require("@tailwindcss/aspect-ratio")
 
 const config = {
 	mode: "jit",

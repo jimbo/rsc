@@ -8,7 +8,7 @@ import ProductImages from "../ProductImages/productImages.server"
 import { getProductDetail } from "./productDetail.gql"
 import classes from "./productDetail.module.css"
 
-const FALLBACK = <p>{"Loading..."}</p>
+const FALLBACK = <ProductDetailContent />
 
 export default function ProductDetail() {
 	return (
@@ -21,11 +21,16 @@ export default function ProductDetail() {
 }
 
 function ProductDetailData() {
-	const result = useData(FETCHERS.getProductDetail)
-	const [product] = result?.data?.products?.items || []
-	const { configurable_options, media_gallery, name, price_range } =
-		product || {}
+	const data = useData(FETCHERS.getProductDetail)
 
+	return <ProductDetailContent data={data} />
+}
+
+function ProductDetailContent(props) {
+	const { data } = props
+	const items = data?.data?.products?.items
+	const product = items ? items[0] : {}
+	const { configurable_options, media_gallery, name, price_range } = product
 	const price = price_range?.minimum_price?.regular_price
 
 	return (

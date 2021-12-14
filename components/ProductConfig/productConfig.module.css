@@ -1,5 +1,6 @@
 .root {
-	composes: col-span-5 col-start-7 content-start gap-12 grid row-span-1 row-start-2 from global;
+	composes: content-start gap-12 grid from global;
+	composes: 3xl_col-span-5 3xl_col-start-7 3xl_row-span-1 3xl_row-start-2 from global;
 }
 
 .legend {

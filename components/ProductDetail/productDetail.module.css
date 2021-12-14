@@ -3,7 +3,8 @@
 }
 
 .aboveFold {
-	composes: col-span-12 col-start-1 gap-6 grid grid-cols-10 grid-rows-common from global;
+	composes: col-span-12 col-start-1 gap-6 grid grid-rows-common from global;
+	composes: 3xl_grid-cols-10 from global;
 }
 
 .belowFold {

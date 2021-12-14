@@ -1,13 +1,20 @@
 .root {
-	composes: bg-gray-100 container grid grid-cols-12 grid-flow-col from global;
+	composes: bg-gray-100 container grid from global;
+	composes: 3xl_grid-cols-12 3xl_grid-flow-col from global;
 }
 
 .image {
-	composes: col-span-8 col-start-5 grid items-stretch justify-items-stretch ratio-8/3 from global;
+	composes: aspect-h-3 aspect-w-4 from global;
+	composes: 3xl_col-span-8 3xl_col-start-5 3xl_aspect-w-8 from global;
 }
 
 .content {
-	composes: bg-gray-800 col-span-4 col-start-1 content-center font-light gap-4 grid items-center p-12 ratio-4/3 text-500 text-white from global;
+	composes: aspect-h-3 aspect-w-4 from global;
+	composes: 3xl_col-span-4 from global;
+}
+
+.wrapper {
+	composes: bg-gray-800 col-start-1 content-center font-light gap-4 grid items-center p-12 text-500 text-white from global;
 }
 
 .title {

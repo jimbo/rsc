@@ -8,6 +8,7 @@ const VALUES = new Map()
 	.set("1", "1")
 	.set("3/4", "3 / 4")
 	.set("2/3", "2 / 3")
+	.set("none", "none")
 
 function AspectRatio({ addComponents, e }) {
 	const rulesets = {}
