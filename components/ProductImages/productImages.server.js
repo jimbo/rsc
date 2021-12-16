@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Thumbnail from "./thumbnail.client"
 import classes from "./productImages.module.css"
 
 export default function ProductImages(props) {
@@ -27,9 +28,10 @@ export default function ProductImages(props) {
 			)
 		}
 
-		// TODO: wrap with a client component, if that ever decides to work
 		thumbnailElements[index] = (
-			<div key={key} className={classes.thumbnail} />
+			<div key={key} className={classes.thumbnail}>
+				<Thumbnail />
+			</div>
 		)
 	}
 

@@ -2,9 +2,6 @@
 	composes: grid items-center justify-items-center p-8 from global;
 }
 
-.graphic {
-}
-
 .path {
 	composes: fill-current text-gray-200 from global;
 }

@@ -1,7 +1,7 @@
 import Placeholder from "../Placeholder/placeholder.server.js"
 import classes from "./banner.module.css"
 
-export default function Banner(props) {
+export default function Banner() {
 	const actionElements = []
 
 	for (const action of DEFAULT_DATA.actions) {

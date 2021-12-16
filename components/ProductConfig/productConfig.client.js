@@ -1,6 +1,10 @@
 import classes from "./productConfig.module.css"
 
-export default function ProductConfig(props) {
+const DEFAULT_PROPS = {
+	options: []
+}
+
+export default function ProductConfig(props = DEFAULT_PROPS) {
 	const { options } = props
 	const attributeElements = []
 
