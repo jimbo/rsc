@@ -14,13 +14,21 @@
 }
 
 .wrapper {
-	composes: bg-gray-800 col-start-1 content-center font-light gap-4 grid items-center p-12 text-500 text-white from global;
+	composes: bg-gray-800 col-start-1 content-center gap-4 grid items-center p-12 text-500 text-white from global;
 }
 
 .title {
-	composes: text-800 from global;
+	composes: text-400 from global;
+	composes: xs_text-600 from global;
+	composes: sm_font-light sm_text-800 from global;
+}
+
+.subtitle {
+	composes: font-light text-300 from global;
+	composes: sm_text-400 from global;
 }
 
 .action {
-	composes: font-normal from global;
+	composes: text-400 from global;
+	composes: xs_text-500 from global;
 }

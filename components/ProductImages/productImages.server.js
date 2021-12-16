@@ -1,6 +1,4 @@
 import Image from "next/image"
-import { cloneElement } from "react"
-import Placeholder from "../Placeholder/placeholder.server"
 import classes from "./productImages.module.css"
 
 export default function ProductImages(props) {
@@ -15,38 +13,25 @@ export default function ProductImages(props) {
 		const altText = `Product image #${position}: ${label}`
 
 		if (position === 1) {
+			const sizes = "(min-width: 480px) 2160px, 384px"
+
 			mainImageElement = (
 				<Image
 					alt={altText}
 					layout="fill"
 					objectFit="cover"
 					priority
-					unoptimized
+					sizes={sizes}
 					src={url}
 				/>
 			)
 		}
-
-		// const imageElement = (
-		// 	<Image
-		// 		alt={altText}
-		// 		layout="fill"
-		// 		objectFit="cover"
-		// 		priority
-		// 		unoptimized
-		// 		src={url}
-		// 	/>
-		// )
 
 		// TODO: wrap with a client component, if that ever decides to work
 		thumbnailElements[index] = (
 			<div key={key} className={classes.thumbnail} />
 		)
 	}
-
-	// if (!mainImageElement) {
-	// 	mainImageElement = <Placeholder orientation="portrait" />
-	// }
 
 	return (
 		<div id="product-images" className={classes.root}>

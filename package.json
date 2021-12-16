@@ -12,17 +12,19 @@
     "@apollo/client": "^3.4.17",
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "graphql": "^16.0.1",
-    "next": "12.0.7",
-    "react": "^18.0.0-beta-12bffc78d-20211206",
-    "react-dom": "^18.0.0-beta-12bffc78d-20211206"
+    "next": "12.0.8-canary.6",
+    "react": "18.0.0-beta-24dd07bd2-20211208",
+    "react-dom": "18.0.0-beta-24dd07bd2-20211208"
   },
   "devDependencies": {
+    "@types/react": "^17.0.37",
     "autoprefixer": "^10.4.0",
     "eslint": "7",
     "eslint-config-next": "12.0.3",
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.5.4"
   },
   "prettier": {
     "arrowParens": "always",

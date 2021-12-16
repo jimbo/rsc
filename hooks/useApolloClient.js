@@ -1,13 +1,10 @@
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client"
 import { useMemo } from "react"
 
-const DEFAULT_URI =
-	"https://commerce-beta.adobe.io/api/MicroconfTenant/graphql?api_key=commerce-graphql-onboarding"
-
 export const createClient = () =>
 	new ApolloClient({
 		cache: new InMemoryCache().restore(globalThis.apollo || {}),
-		link: new HttpLink({ fetch, uri: DEFAULT_URI }),
+		link: new HttpLink({ fetch, uri: process.env.gql }),
 		ssrMode: !globalThis.document
 	})
 

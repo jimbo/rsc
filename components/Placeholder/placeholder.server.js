@@ -1,20 +1,22 @@
 import classes from "./placeholder.module.css"
 
 const DEFAULT_PROPS = {
+	graphicProps: {},
 	orientation: "landscape"
 }
 
 export default function Placeholder(props = DEFAULT_PROPS) {
-	const { orientation } = props
-	const layoutClass =
-		orientation === "portrait" ? classes.portrait : classes.landscape
+	const { graphicProps } = props
 
 	return (
 		<div className={classes.root}>
 			<svg
-				className={layoutClass}
+				className={classes.graphic}
+				height={108}
 				viewBox="0 0 144 108"
+				width={144}
 				xmlns="http://www.w3.org/2000/svg"
+				{...graphicProps}
 			>
 				<path
 					className={classes.path}

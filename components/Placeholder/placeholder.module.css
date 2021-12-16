@@ -2,12 +2,7 @@
 	composes: grid items-center justify-items-center p-8 from global;
 }
 
-.landscape {
-	composes: h-[108px] w-[144px] from global;
-}
-
-.portrait {
-	composes: h-[108px] w-[144px] from global;
+.graphic {
 }
 
 .path {
