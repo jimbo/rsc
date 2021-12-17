@@ -1,0 +1,29 @@
+.root {
+	composes: gap-2 grid grid-cols-magic grid-flow-col h-full items-center from global;
+}
+
+.navActions {
+	composes: gap-2 grid grid-flow-col items-center from global;
+}
+
+.userActions {
+	composes: gap-2 grid grid-flow-col items-center from global;
+}
+
+.navButton,
+.searchButton,
+.cartButton {
+	composes: flex h-12 items-center justify-center w-12 from global;
+}
+
+.homeButton {
+	composes: flex h-12 items-center justify-center w-24 from global;
+}
+
+.graphic {
+	composes: h-6 w-6 from global;
+}
+
+.path {
+	composes: stroke-current text-gray-600 from global;
+}

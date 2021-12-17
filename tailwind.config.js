@@ -15,8 +15,11 @@ const config = {
 	separator: "_",
 	theme: {
 		extend: {
+			gridTemplateColumns: {
+				magic: "auto 1fr"
+			},
 			gridTemplateRows: {
-				common: "auto 1fr"
+				magic: "auto 1fr"
 			}
 		},
 		fontSize: {

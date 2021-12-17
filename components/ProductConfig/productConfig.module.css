@@ -34,3 +34,11 @@
 .colorLabel {
 	composes: radioLabel;
 }
+
+.selectInput {
+	composes: border border-gray-500 h-10 px-4 rounded-sm from global;
+}
+
+.addToCart {
+	composes: bg-gray-800 h-12 px-10 rounded-full text-white uppercase from global;
+}

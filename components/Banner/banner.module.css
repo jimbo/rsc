@@ -18,7 +18,7 @@
 }
 
 .title {
-	composes: text-400 from global;
+	composes: text-500 from global;
 	composes: xs_text-600 from global;
 	composes: sm_font-light sm_text-800 from global;
 }

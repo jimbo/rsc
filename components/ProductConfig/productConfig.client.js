@@ -24,6 +24,17 @@ export default function ProductConfig(props = DEFAULT_PROPS) {
 	return (
 		<form id="product-config" className={classes.root}>
 			{attributeElements}
+			<fieldset className={classes.fieldset}>
+				<legend className={classes.legend}>{"Quantity"}</legend>
+				<QuantityField />
+			</fieldset>
+			<button
+				className={classes.addToCart}
+				id="add-to-cart"
+				type="button"
+			>
+				{"Add to cart"}
+			</button>
 		</form>
 	)
 }
@@ -55,11 +66,11 @@ function RadioField(props) {
 			<span className={classes.radioLabel}>{label}</span>
 			<input
 				checked={isChecked}
+				className={classes.radioInput}
 				id={uid}
 				readOnly
 				type="radio"
 				value={uid}
-				className={classes.radioInput}
 			/>
 		</label>
 	)
@@ -73,12 +84,26 @@ function ColorField(props) {
 			<span className={classes.colorLabel}>{label}</span>
 			<input
 				checked={isChecked}
+				className={classes.colorInput}
 				id={uid}
 				readOnly
 				type="radio"
 				value={uid}
-				className={classes.colorInput}
 			/>
 		</label>
 	)
+}
+
+function QuantityField() {
+	const optionElements = Array.from({ length: 10 }, (item, index) => {
+		const value = `${1 + index}`
+
+		return (
+			<option key={value} value={value}>
+				{value}
+			</option>
+		)
+	})
+
+	return <select className={classes.selectInput}>{optionElements}</select>
 }
