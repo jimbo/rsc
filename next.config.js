@@ -10,12 +10,10 @@ module.exports = {
 		serverComponents: true
 	},
 	images: {
-		deviceSizes: [320, 480, 640, 800, 960, 1120, 1280, 1440, 1600],
+		deviceSizes: [320, 480, 640, 800, 960, 1120, 1280, 1440, 1600, 1920],
 		domains: ["jnz3dtiuj77ca.dummycachetest.com"]
 	},
-	webpack: (config, helpers) => {
-		const { isServer } = helpers
-
+	webpack: (config, { isServer }) => {
 		if (isServer) {
 			config.module.rules.push({
 				test: /\.yaml$/,

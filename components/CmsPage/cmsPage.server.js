@@ -4,7 +4,6 @@ import { useData } from "../../hooks/useData"
 import classes from "./cmsPage.module.css"
 
 const FALLBACK = <CmsPageContent />
-// const MOCK_DATA = {}
 
 export default function CmsPage() {
 	return (
@@ -40,18 +39,20 @@ function CmsPageContent(props) {
 }
 
 function mapToReactElements(nodes) {
-	if (!Array.isArray(nodes)) return null
+	return Array.isArray(nodes)
+		? Array.from(nodes, createReactElement)
+		: createReactElement(nodes)
+}
 
-	return Array.from(nodes, (node, index) => {
-		if (typeof node === "string") return node
+function createReactElement(node, index) {
+	if (typeof node === "string") return node
 
-		const key = node?.key || index
-		const props = node?.props || {}
-		const elementType = node?.tag || Fragment
-		const children = mapToReactElements(node?.children)
+	const key = node?.key || index
+	const props = node?.props || {}
+	const elementType = node?.tag || Fragment
+	const children = mapToReactElements(node?.children)
 
-		return createElement(elementType, { key, ...props, children })
-	})
+	return createElement(elementType, { key, ...props, children })
 }
 
 const FETCHERS = {
