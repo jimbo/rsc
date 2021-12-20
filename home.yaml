@@ -1,0 +1,9 @@
+---
+- tag: div
+  key: row 1
+  props:
+    className: cms-row
+  children:
+    - tag: div
+      key: column 1
+      children: hello world

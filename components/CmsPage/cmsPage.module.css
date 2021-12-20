@@ -1,0 +1,7 @@
+.root {
+	composes: bg-indigo-100 col-span-12 h-10 from global;
+}
+
+.manifest {
+	composes: cms-row from global;
+}

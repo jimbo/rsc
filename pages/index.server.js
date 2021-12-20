@@ -1,3 +1,3 @@
-import Home from "../components/Home/home.server"
+import CmsPage from "../components/CmsPage/cmsPage.server"
 
-export default Home
+export default CmsPage

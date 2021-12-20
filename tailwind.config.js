@@ -1,8 +1,9 @@
 const aspectRatioPlugin = require("@tailwindcss/aspect-ratio")
+const cmsPlugin = require("./plugins/cmsPlugin")
 
 const config = {
 	mode: "jit",
-	plugins: [aspectRatioPlugin],
+	plugins: [aspectRatioPlugin, cmsPlugin],
 	purge: {
 		content: ["./components/**/*.css", "./pages/**/*.css"],
 		extractors: [
@@ -36,6 +37,7 @@ const config = {
 			DEFAULT: "0.875rem"
 		},
 		screens: {
+			"min": "320px",
 			"xs": "480px",
 			"sm": "640px",
 			"md": "800px",
@@ -43,7 +45,8 @@ const config = {
 			"xl": "1120px",
 			"2xl": "1280px",
 			"3xl": "1440px",
-			"4xl": "1600px"
+			"4xl": "1600px",
+			"max": "1920px"
 		}
 	}
 }
