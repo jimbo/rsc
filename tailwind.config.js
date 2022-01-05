@@ -1,9 +1,8 @@
 const aspectRatioPlugin = require("@tailwindcss/aspect-ratio")
-const cmsPlugin = require("./plugins/cmsPlugin")
 
 const config = {
 	mode: "jit",
-	plugins: [aspectRatioPlugin, cmsPlugin],
+	plugins: [aspectRatioPlugin],
 	purge: {
 		content: ["./components/**/*.css", "./pages/**/*.css"],
 		extractors: [
@@ -13,6 +12,12 @@ const config = {
 			}
 		]
 	},
+	// content: {
+	// 	extract: {
+	// 		css: (content) => content.match(matcher) || [],
+	// 	},
+	// 	files: ["./components/**/*.css", "./pages/**/*.css"],
+	// },
 	separator: "_",
 	theme: {
 		extend: {

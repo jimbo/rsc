@@ -6,3 +6,16 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 }
+
+.cms-page {
+	@apply contents;
+}
+
+.cms-row {
+	@apply auto-cols-fr col-span-12 gap-4 grid grid-flow-col;
+	@apply sm_gap-6;
+}
+
+.cms-cell {
+	@apply bg-green-100 min-w-0;
+}

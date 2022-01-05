@@ -9,8 +9,8 @@
 }
 
 .body {
-	composes: gap-6 grid grid-cols-12 p-4 from global;
-	composes: sm_p-12 from global;
+	composes: gap-4 grid grid-cols-12 p-4 from global;
+	composes: sm_gap-6 sm_p-12 from global;
 }
 
 .footer {

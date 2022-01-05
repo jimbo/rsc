@@ -1,7 +1,8 @@
 .root {
-	composes: bg-indigo-100 col-span-12 h-10 from global;
+	composes: bg-indigo-100 col-span-12 from global;
 }
 
-.manifest {
-	composes: cms-row from global;
+.content {
+	composes: gap-4 grid grid-cols-12 from global;
+	composes: sm_gap-6 from global;
 }

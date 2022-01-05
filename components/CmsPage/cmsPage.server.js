@@ -1,6 +1,10 @@
 import { Fragment, Suspense, createElement } from "react"
-import MOCK_DATA from "../../home.yaml"
+import rehypeParse from "rehype-parse"
+import rehypeReact from "rehype-react"
+import { unified } from "unified"
+import MOCK_DATA from "../../data/home"
 import { useData } from "../../hooks/useData"
+import Link from "../Link/link.client"
 import classes from "./cmsPage.module.css"
 
 const FALLBACK = <CmsPageContent />
@@ -23,10 +27,8 @@ function CmsPageData() {
 
 function CmsPageContent(props) {
 	const { data } = props
-	const elementProps = {}
-
-	if (data) {
-		elementProps.children = mapToReactElements(data)
+	const elementProps = {
+		children: data
 	}
 
 	return (
@@ -38,23 +40,19 @@ function CmsPageContent(props) {
 	)
 }
 
-function mapToReactElements(nodes) {
-	return Array.isArray(nodes)
-		? Array.from(nodes, createReactElement)
-		: createReactElement(nodes)
-}
-
-function createReactElement(node, index) {
-	if (typeof node === "string") return node
-
-	const key = node?.key || index
-	const props = node?.props || {}
-	const elementType = node?.tag || Fragment
-	const children = mapToReactElements(node?.children)
-
-	return createElement(elementType, { key, ...props, children })
-}
-
 const FETCHERS = {
-	getCmsPage: async () => MOCK_DATA
+	getCmsPage: async () => {
+		const components = { a: Link }
+
+		try {
+			const file = await unified()
+				.use(rehypeParse, { fragment: true })
+				.use(rehypeReact, { Fragment, components, createElement })
+				.process(MOCK_DATA)
+
+			return file.result
+		} catch (error) {
+			console.error("ERROR while parsing.")
+		}
+	}
 }
