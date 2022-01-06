@@ -1,5 +1,5 @@
 .root {
-	composes: bg-indigo-100 col-span-12 from global;
+	composes: col-span-12 from global;
 }
 
 .content {

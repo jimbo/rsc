@@ -8,14 +8,53 @@ body {
 }
 
 .cms-page {
-	@apply contents;
+	@apply col-span-12 grid grid-cols-12;
 }
 
 .cms-row {
-	@apply auto-cols-fr col-span-12 gap-4 grid grid-flow-col;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	@apply col-span-12 gap-4 grid;
 	@apply sm_gap-6;
 }
 
-.cms-cell {
-	@apply bg-green-100 min-w-0;
+.cms-slider {
+	@apply xs_-mx-4 xs_-mt-4;
+	@apply sm_-mx-12 xs_-mt-12;
+}
+
+.cms-slide,
+.cms-banner {
+	@apply grid grid-cols-12;
+}
+
+.cms-slide-image,
+.cms-banner-image {
+	@apply aspect-h-6 aspect-w-4 bg-gradient-to-b col-span-12 col-start-1 from-pink-400 opacity-20 row-span-2 row-start-1 to-blue-500;
+	@apply lg_aspect-h-3 lg_aspect-w-8 lg_row-span-1 lg_row-start-1;
+}
+
+.cms-slide-content,
+.cms-banner-content {
+	@apply aspect-h-3 aspect-w-4 col-span-12 col-start-1 row-span-1 row-start-2;
+	@apply lg_aspect-h-3 lg_aspect-w-8 lg_col-span-10 lg_col-start-2 lg_row-start-1;
+}
+
+.cms-block {
+	@apply content-center gap-4 grid items-center p-12 text-500 text-center;
+}
+
+.cms-block-title {
+	@apply text-500;
+	@apply xs_text-600;
+	@apply sm_font-light sm_text-800;
+}
+
+.cms-block-subtitle {
+	@apply font-light text-300;
+	@apply sm_text-400;
+}
+
+.cms-block-action {
+	@apply text-400;
+	@apply xs_text-500;
 }

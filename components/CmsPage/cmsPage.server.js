@@ -4,7 +4,7 @@ import rehypeReact from "rehype-react"
 import { unified } from "unified"
 import MOCK_DATA from "../../data/home"
 import { useData } from "../../hooks/useData"
-import Link from "../Link/link.client"
+import Link from "./cmsLink.client"
 import classes from "./cmsPage.module.css"
 
 const FALLBACK = <CmsPageContent />
