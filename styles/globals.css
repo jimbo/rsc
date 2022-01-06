@@ -18,8 +18,8 @@ body {
 }
 
 .cms-slider {
-	@apply xs_-mx-4 xs_-mt-4;
-	@apply sm_-mx-12 xs_-mt-12;
+	@apply xs_-m-4;
+	@apply sm_-m-12;
 }
 
 .cms-slide,
@@ -29,7 +29,7 @@ body {
 
 .cms-slide-image,
 .cms-banner-image {
-	@apply aspect-h-6 aspect-w-4 bg-gradient-to-b col-span-12 col-start-1 from-pink-400 opacity-20 row-span-2 row-start-1 to-blue-500;
+	@apply aspect-h-6 aspect-w-4 bg-gradient-to-br col-span-12 col-start-1 from-green-400 opacity-20 row-span-2 row-start-1 to-blue-500;
 	@apply lg_aspect-h-3 lg_aspect-w-8 lg_row-span-1 lg_row-start-1;
 }
 
@@ -37,6 +37,30 @@ body {
 .cms-banner-content {
 	@apply aspect-h-3 aspect-w-4 col-span-12 col-start-1 row-span-1 row-start-2;
 	@apply lg_aspect-h-3 lg_aspect-w-8 lg_col-span-10 lg_col-start-2 lg_row-start-1;
+}
+
+.cms-callout {
+	@apply grid items-end;
+}
+
+.cms-callout-image {
+	@apply aspect-h-3 aspect-w-4 bg-gradient-to-br col-span-1 col-start-1 from-pink-500 opacity-20 row-span-1 row-start-1 to-yellow-500;
+}
+
+.cms-callout-content {
+	@apply bg-gray-800 col-span-1 col-start-1 justify-self-end relative row-span-1 row-start-1 text-white;
+}
+
+.cms-callout-content-block {
+	@apply p-4;
+}
+
+.cms-callout-title {
+	@apply font-bold text-500;
+}
+
+.cms-callout-subtitle {
+	@apply text-400;
 }
 
 .cms-block {
