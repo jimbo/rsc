@@ -41,6 +41,16 @@ const config = {
 			1000: ["6rem", "7rem"],
 			DEFAULT: "0.875rem"
 		},
+		transitionDuration: {
+			1: "64ms",
+			2: "128ms",
+			3: "192ms",
+			4: "256ms",
+			5: "320ms",
+			6: "384ms",
+			7: "448ms",
+			8: "512ms"
+		},
 		screens: {
 			"min": "320px",
 			"xs": "480px",

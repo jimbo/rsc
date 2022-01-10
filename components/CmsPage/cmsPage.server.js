@@ -4,6 +4,7 @@ import rehypeReact from "rehype-react"
 import { unified } from "unified"
 import MOCK_DATA from "../../data/home"
 import { useData } from "../../hooks/useData"
+import Div from "./cmsDiv.server"
 import Link from "./cmsLink.client"
 import classes from "./cmsPage.module.css"
 
@@ -42,17 +43,17 @@ function CmsPageContent(props) {
 
 const FETCHERS = {
 	getCmsPage: async () => {
-		const components = { a: Link }
+		const components = { a: Link, div: Div }
 
 		try {
-			const file = await unified()
+			const { result } = await unified()
 				.use(rehypeParse, { fragment: true })
 				.use(rehypeReact, { Fragment, components, createElement })
 				.process(MOCK_DATA)
 
-			return file.result
+			return result
 		} catch (error) {
-			console.error("ERROR while parsing.")
+			console.error("Error parsing HTML content.")
 		}
 	}
 }

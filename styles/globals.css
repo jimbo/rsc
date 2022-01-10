@@ -7,6 +7,10 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+#cms-page-content > div {
+	@apply contents;
+}
+
 .cms-page {
 	@apply col-span-12 grid grid-cols-12;
 }
@@ -18,13 +22,23 @@ body {
 }
 
 .cms-slider {
-	@apply xs_-m-4;
-	@apply sm_-m-12;
+	@apply grid overflow-hidden relative;
+	@apply xs_-my-4;
+	@apply sm_-my-12;
+}
+
+.cms-slides {
+	transform: translateX(calc(var(--slide) * -100%));
+	@apply duration-8 ease-out grid transition-transform;
 }
 
 .cms-slide,
 .cms-banner {
-	@apply grid grid-cols-12;
+	@apply grid grid-cols-12 items-center;
+}
+
+.cms-slide {
+	@apply col-span-1 col-start-1 row-span-1 row-start-1;
 }
 
 .cms-slide-image,
@@ -65,6 +79,7 @@ body {
 
 .cms-block {
 	@apply content-center gap-4 grid items-center p-12 text-500 text-center;
+	@apply lg_text-left;
 }
 
 .cms-block-title {

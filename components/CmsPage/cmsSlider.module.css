@@ -1,0 +1,7 @@
+.controls {
+	composes: absolute grid grid-flow-col inset-0 items-end justify-center mb-16 pointer-events-none from global;
+}
+
+.control {
+	composes: cursor-pointer flex h-12 items-center justify-center pointer-events-auto w-12 from global;
+}
