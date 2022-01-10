@@ -1,5 +1,7 @@
 .controls {
-	composes: absolute grid grid-flow-col inset-0 items-end justify-center mb-16 pointer-events-none from global;
+	composes: absolute grid grid-flow-col inset-0 items-end justify-center mb-4 pointer-events-none from global;
+	composes: xs_mb-8 from global;
+	composes: sm_mb-16 from global;
 }
 
 .control {

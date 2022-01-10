@@ -23,8 +23,8 @@ body {
 
 .cms-slider {
 	@apply grid overflow-hidden relative;
-	@apply xs_-my-4;
-	@apply sm_-my-12;
+	@apply xs_-m-4;
+	@apply sm_-m-12;
 }
 
 .cms-slides {
