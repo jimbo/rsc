@@ -54,7 +54,7 @@ function Control(props) {
 	}, [index, setActiveSlide])
 
 	return (
-		<a className={classes.control} onClick={handleClick}>
+		<button className={classes.control} onClick={handleClick} type="button">
 			<svg
 				height={16}
 				viewBox="0 0 16 16"
@@ -63,6 +63,6 @@ function Control(props) {
 			>
 				<circle cx={8} cy={8} r={8} />
 			</svg>
-		</a>
+		</button>
 	)
 }
