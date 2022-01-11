@@ -2,14 +2,14 @@ const aspectRatioPlugin = require("@tailwindcss/aspect-ratio")
 const MATCHER = /(?<=composes:.*)(\b\S+\b)(?=.*from global;)/g
 
 const config = {
-	mode: "jit",
-	plugins: [aspectRatioPlugin],
 	content: {
 		extract: {
 			css: (content) => content.match(MATCHER) || []
 		},
 		files: ["./components/**/*.css", "./pages/**/*.css"]
 	},
+	mode: "jit",
+	plugins: [aspectRatioPlugin],
 	separator: "_",
 	theme: {
 		extend: {

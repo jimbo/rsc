@@ -48,13 +48,19 @@ export default function CmsSlider(props) {
 
 function Control(props) {
 	const { index, setActiveSlide } = props
+	const label = `Slide ${1 + index}`
 
 	const handleClick = useCallback(() => {
 		setActiveSlide(index)
 	}, [index, setActiveSlide])
 
 	return (
-		<button className={classes.control} onClick={handleClick} type="button">
+		<button
+			aria-label={label}
+			className={classes.control}
+			onClick={handleClick}
+			type="button"
+		>
 			<svg
 				height={16}
 				viewBox="0 0 16 16"

@@ -11,13 +11,10 @@
 }
 
 .navButton,
+.homeLink,
 .searchButton,
 .cartButton {
 	composes: flex h-12 items-center justify-center w-12 from global;
-}
-
-.homeButton {
-	composes: flex h-12 items-center justify-center w-24 from global;
 }
 
 .graphic {
