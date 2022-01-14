@@ -4,7 +4,7 @@ import { useData } from "../../hooks/useData"
 import Banner from "../Banner/banner.server"
 import ProductConfig from "../ProductConfig/productConfig.client"
 import ProductEssentials from "../ProductEssentials/productEssentials.server"
-import ProductImages from "../ProductImages/productImages.server"
+import ProductImages from "../ProductImages/productImages.client"
 import { getProductDetail } from "./productDetail.gql"
 import classes from "./productDetail.module.css"
 

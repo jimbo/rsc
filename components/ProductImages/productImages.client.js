@@ -1,9 +1,11 @@
 import Image from "next/image"
+import { useState } from "react"
 import Thumbnail from "./thumbnail.client"
 import classes from "./productImages.module.css"
 
 export default function ProductImages(props) {
 	const { images } = props
+	const [activeImage, setActiveImage] = useState(1)
 	const thumbnailElements = []
 	let mainImageElement
 
@@ -13,7 +15,7 @@ export default function ProductImages(props) {
 		const key = `${position}_${url}`
 		const altText = `Product image #${position}: ${label}`
 
-		if (position === 1) {
+		if (position === activeImage) {
 			const sizes = "(min-width: 480px) 2160px, 384px"
 
 			mainImageElement = (
@@ -30,7 +32,14 @@ export default function ProductImages(props) {
 
 		thumbnailElements[index] = (
 			<div key={key} className={classes.thumbnail}>
-				<Thumbnail />
+				<Thumbnail image={image} setActiveImage={setActiveImage}>
+					<Image
+						alt={altText}
+						layout="fill"
+						objectFit="cover"
+						src={url}
+					/>
+				</Thumbnail>
 			</div>
 		)
 	}

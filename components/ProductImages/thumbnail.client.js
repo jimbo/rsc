@@ -2,13 +2,21 @@ import { useCallback } from "react"
 import classes from "./thumbnail.module.css"
 
 export default function Thumbnail(props) {
+	const { children, image, setActiveImage } = props
+	const { position } = image
+
 	const handleClick = useCallback(() => {
-		console.log("clicked")
-	}, [])
+		setActiveImage(position)
+	}, [position, setActiveImage])
 
 	return (
-		<div className={classes.root} onClick={handleClick}>
-			{props.children}
-		</div>
+		<button
+			aria-label={`View product image #${position}`}
+			className={classes.root}
+			onClick={handleClick}
+			type="button"
+		>
+			{children}
+		</button>
 	)
 }
