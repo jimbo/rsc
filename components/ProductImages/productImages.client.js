@@ -37,6 +37,7 @@ export default function ProductImages(props) {
 						alt={altText}
 						layout="fill"
 						objectFit="cover"
+						sizes="(min-width: 1440px) 384px, 40px"
 						src={url}
 					/>
 				</Thumbnail>
