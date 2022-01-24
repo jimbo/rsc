@@ -4,6 +4,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+	"custom": "node server.js",
     "format": "prettier --write '@(components|hooks|pages|plugins|styles)/**/*.@(css|js|jsx)' '*.config.js'",
     "lint": "next lint",
     "start": "next start"
