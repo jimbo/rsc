@@ -6,7 +6,7 @@ const config = {
 		extract: {
 			css: (content) => content.match(MATCHER) || []
 		},
-		files: ["./components/**/*.css", "./pages/**/*.css"]
+		files: ["./{components,pages}/**/*.css"]
 	},
 	mode: "jit",
 	plugins: [aspectRatioPlugin],
