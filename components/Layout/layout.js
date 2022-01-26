@@ -1,4 +1,4 @@
-import Header from "../Header/header.client"
+import Header from "../Header/header"
 import classes from "./layout.module.css"
 
 export default function Layout(props) {

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { useState } from "react"
-import Thumbnail from "./thumbnail.client"
+import Thumbnail from "./thumbnail"
 import classes from "./productImages.module.css"
 
 export default function ProductImages(props) {

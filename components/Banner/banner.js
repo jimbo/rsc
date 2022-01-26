@@ -1,4 +1,4 @@
-import Placeholder from "../Placeholder/placeholder.server.js"
+import Placeholder from "../Placeholder/placeholder"
 import classes from "./banner.module.css"
 
 export default function Banner() {

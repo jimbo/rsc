@@ -1,5 +1,5 @@
 import { createElement } from "react"
-import Slider from "./cmsSlider.client"
+import Slider from "./cmsSlider"
 
 export default function CmsDiv(props) {
 	const contentType = props["data-pb"]
