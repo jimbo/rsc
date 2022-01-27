@@ -1,4 +1,4 @@
-import { Fragment, Suspense } from "react"
+import { Fragment } from "react"
 import Banner from "../Banner/banner"
 import ProductConfig from "../ProductConfig/productConfig"
 import ProductEssentials from "../ProductEssentials/productEssentials"
@@ -18,9 +18,7 @@ export default function ProductDetail(props) {
 				<ProductConfig options={configurable_options} />
 			</section>
 			<section className={classes.belowFold}>
-				<Suspense fallback={null}>
-					<Banner />
-				</Suspense>
+				<Banner />
 			</section>
 		</Fragment>
 	)

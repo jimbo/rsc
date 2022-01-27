@@ -10,7 +10,7 @@ export default `
 						<div class="cms-block">
 							<h2 class="cms-block-title">Headline goes here</h2>
 							<p class="cms-block-subtitle">Optional metadata for subtitle should be kept to one or two lines</p>
-							<a class="cms-block-action" href="/pdp">ACTION</a>
+							<a class="cms-block-action" href="/carina-cardigan.html">ACTION</a>
 						</div>
 					</div>
 				</div>
@@ -21,7 +21,7 @@ export default `
 						<div class="cms-block">
 							<h2 class="cms-block-title">Headline goes here</h2>
 							<p class="cms-block-subtitle">Optional metadata for subtitle should be kept to one or two lines</p>
-							<a class="cms-block-action" href="/pdp">ACTION</a>
+							<a class="cms-block-action" href="/carina-cardigan.html">ACTION</a>
 						</div>
 					</div>
 				</div>
@@ -75,7 +75,7 @@ export default `
 					<div class="cms-block">
 						<h2 class="cms-block-title">Headline goes here</h2>
 						<p class="cms-block-subtitle">Optional metadata for subtitle should be kept to one or two lines</p>
-						<a class="cms-block-action" href="/pdp">ACTION</a>
+						<a class="cms-block-action" href="/carina-cardigan.html">ACTION</a>
 					</div>
 				</div>
 			</div>
