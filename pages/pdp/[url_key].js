@@ -4,8 +4,9 @@ export default ProductDetail
 
 export async function getStaticPaths() {
 	return {
-		fallback: false,
-		paths: [{ params: { url_key: "carina-cardigan.html" } }]
+		fallback: "blocking",
+		paths: []
+		// paths: [{ params: { url_key: "carina-cardigan.html" } }]
 	}
 }
 
