@@ -6,7 +6,7 @@ import ProductImages from "../ProductImages/productImages"
 import classes from "./productDetail.module.css"
 
 export default function ProductDetail(props) {
-	const { product } = props
+	const product = props.product || {}
 	const { configurable_options, media_gallery, name, price_range } = product
 	const price = price_range?.minimum_price?.regular_price
 
